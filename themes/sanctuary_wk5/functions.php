@@ -116,9 +116,8 @@ add_action( 'widgets_init', 'sanctuary_wk5_widgets_init' );
 function sanctuary_wk5_scripts() {
 	wp_enqueue_style( 'sanctuary_wk5-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'sanctuary_wk5-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'sanctuary_wk5-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	//Add Google Fonts: Arvo, Open Sans and Open Sans Condensed
+	wp_enqueue_style( 'sanctuary_wk5-google-fonts', 'https://fonts.googleapis.com/css?family=Arvo:400,700|Open+Sans:400,700|Open+Sans+Condensed:300' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

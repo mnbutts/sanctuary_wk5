@@ -272,7 +272,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -286,7 +286,23 @@ h5,
 h6 {
 	clear: both;
 }
-
+.site-title {
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 1;
+	text-decoration: none;
+}
+.site-description {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 30px;
+}
+.main-navigation {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+}
 p {
 	margin-bottom: 1.5em;
 }
