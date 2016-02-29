@@ -15,9 +15,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sanctuary_wk5' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'sanctuary_wk5' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'sanctuary_wk5' ), 'sanctuary_wk5', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<div class="social_media">
+				<i class="fa fa-tumblr"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-pinterest"></i>
+				<i class="fa fa-facebook-square"></i>
+			</div>
+			<p class="copyright">&copy; copyright Sanctuary Eco-Retreat 2014</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

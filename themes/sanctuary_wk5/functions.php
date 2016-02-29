@@ -91,7 +91,12 @@ function sanctuary_wk5_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'sanctuary_wk5_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'sanctuary_wk5_content_width', 0 );
-
+// Load jQuery
+if (!is_admin() ) {
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"), false);
+	wp_enqueue_script('jquery');	
+}
 /**
  * Register widget area.
  *
