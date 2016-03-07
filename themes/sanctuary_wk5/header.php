@@ -17,11 +17,16 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/flexslider.css" type="text/css">
+
+<?php wp_enqueue_script("jquery"); ?>
+
 
 
 <?php wp_head(); ?>
-	
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fullPage.min.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.flexslider.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/cabin.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fullPage.js"></script>
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/home.js"></script>
 
 </head>

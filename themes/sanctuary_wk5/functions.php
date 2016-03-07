@@ -46,6 +46,7 @@ function sanctuary_wk5_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'sanctuary_wk5' ),
 	) );
+	add_action( 'init', 'create_my_post_types' );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -154,3 +155,4 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+

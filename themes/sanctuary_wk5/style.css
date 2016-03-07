@@ -36,6 +36,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Header
 # Fixed Header and Footer
 # Widgets
+# Cabin Page
 # Content
 	## Posts and pages
 	## Asides
@@ -361,7 +362,9 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background-image: url(http://localhost:8888/wp-content/uploads/2016/03/background.jpg); /* Fallback for when there is no custom background color defined. */
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 blockquote:before,
@@ -559,30 +562,38 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.menu-toggle {
+	position: absolute;
+	right: 10px;
+	background-color: #fff;
+}
+
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	height: 60px;
+	height: 56px;
 	width: 100%;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Arvo', serif;
 	font-weight: 300;
-	font-size: 20px;
+	font-size: 9px;
 	background-color: rgba(0, 0, 0, 0.61);
-	text-align: right;
 }
 
 .main-navigation ul {
 	display: none;
 	list-style: none;
 	margin: 0;
-	padding-left: 50%;
+	float: right;
+	width: 50%;
+	position: absolute;
+	top: 85%;
+	left: 43%;
 }
 
 .main-navigation li {
 	float: left;
 	position: relative;
-	padding-left: 10px;
+	padding-left: 20px;
 }
 
 .main-navigation a {
@@ -767,18 +778,18 @@ a:active {
 # Header
 --------------------------------------------------------------*/
 .site-branding {
-	margin-left: 0;
+	position: absolute;
+	top: 5px;
 	width: 50%;
-	float: left;
-	padding-top: 30px;
+	left: 30px;
 }
 .site-title {
-	margin-top: 40px;
-	margin-bottom: 0;
-	font-family: 'Arvo', serif;
+	margin: 0;
 	font-weight: 700;
-	font-size: 100%;
+	font-size: 61px;
 	line-height: .5;
+	letter-spacing: .4;
+	font-family: 'Arvo', serif;
 }
 .site-title a {
 	text-decoration: none;
@@ -786,11 +797,15 @@ a:active {
 	text-align: justify;
 }
 .site-description {
-	margin-top: 0;
-	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: 400;
-	font-size: 100%;
+	font-size: 22px;
 	color: #fff;
+	position: absolute;
+	top: 36px;
+	text-align: justify-all;
+	left: 4px;
 }
 .menu-item {
 	text-align: right;
@@ -808,7 +823,7 @@ a:active {
 		padding: 20px 0 0 0;
 	}
 .site-header{
-		top:0px;
+		top: 20px;
 	}
 .site-info{
 		bottom:0px;
@@ -826,24 +841,23 @@ a:active {
 * --------------------------------------- */
 #section0{
 	background-image: url(http://localhost:8888/wp-content/uploads/2016/02/homepage1.jpg);
-	padding: 40% 0 0 0;
+	padding: 30% 0 0 0;
 }
 #section2{
 	background-image: url(http://localhost:8888/wp-content/uploads/2016/02/homepage2.jpg);
-	padding: 40% 0 0 0;
+	padding: 6% 0 0 0;
 }
 #section3{
 	background-image: url(http://localhost:8888/wp-content/uploads/2016/02/homepage3.jpg);
-	padding: 40% 0 0 0;
+	padding: 6% 0 0 0;
 }
 #section4{
 	background-image: url(http://localhost:8888/wp-content/uploads/2016/02/homepage4.jpg);
-	padding: 40% 0 0 0;
+	padding: 6% 0 0 0;
 }
 #section5{
 	background-image: url(http://localhost:8888/wp-content/uploads/2016/02/homepage5.jpg);
-	padding: 40% 0 0 0;
-	margin-bottom: 0;
+	padding: 6% 0 0 0;
 }
 .fa {
 	font-size: 25px;
@@ -862,6 +876,38 @@ a:active {
 .widget select {
 	max-width: 100%;
 }
+/*--------------------------------------------------------------
+# Cabin Page
+--------------------------------------------------------------*/
+.gallery_page_section {
+	margin: 60px auto;
+	height: auto;
+	width: 100%;
+	padding: 30px;
+	/*overflow: hidden;*/
+}
+
+.gallery_info h3,
+.gallery_info h4,
+.gallery_info p {
+	color: #000;
+	margin: 0;
+}
+
+.gallery {
+	clear: both;
+	width: 60%;
+	float: left;
+	background: #fff;	
+	height: auto;
+}
+.gallery_info {
+	float: left;
+	width: 40%;
+	background: #fff;
+	padding: 20px 35px;
+}
+
 
 /*--------------------------------------------------------------
 # Content
@@ -975,49 +1021,6 @@ object {
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-.gallery {
-	margin-bottom: 1.5em;
-}
 
-.gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
-}
 
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
-}
 
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
-}
-
-.gallery-caption {
-	display: block;
-}

@@ -2,7 +2,8 @@
 $(function() {
 
 	$(document).ready(function() {
-    $('#fullpage').fullpage();
-    css3: true
+    $('#fullpage').fullpage({
+    	'verticalCentered': false
+    });  
 });
 })
