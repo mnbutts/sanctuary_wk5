@@ -44,7 +44,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Infinite scroll
 # Media
 	## Captions
-	## Galleries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -886,14 +885,32 @@ a:active {
 	padding: 30px;
 	/*overflow: hidden;*/
 }
-
-.gallery_info h3,
 .gallery_info h4,
+.gallery_info h3,
 .gallery_info p {
 	color: #000;
 	margin: 0;
+	line-height: 1em;
 }
-
+.gallery_info h3 {
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	font-size: 23px;
+}
+.gallery_info h4 {
+	font-size: 20px;
+}
+.gallery_info h3,
+.gallery_info h4 {
+	padding-bottom: 5px;
+}
+.gallery_info p {
+	padding-bottom: 20px;
+}
+.cabin_button {
+	color: #000;
+	background-color: hsla(125, 27%, 50%, 0.8); 
+}
 .gallery {
 	clear: both;
 	width: 60%;
@@ -907,7 +924,6 @@ a:active {
 	background: #fff;
 	padding: 20px 35px;
 }
-
 
 /*--------------------------------------------------------------
 # Content
@@ -1018,9 +1034,6 @@ object {
 	text-align: center;
 }
 
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
 
 
 
