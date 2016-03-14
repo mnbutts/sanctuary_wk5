@@ -35,6 +35,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Clearings
 # Header
 # Fixed Header and Footer
+# Fullpage Background
 # Widgets
 # Cabin Page
 # Content
@@ -269,7 +270,6 @@ th {
 # Typography
 --------------------------------------------------------------*/
 body,
-button,
 input,
 select,
 textarea {
@@ -288,11 +288,23 @@ h5,
 h6 {
 	clear: both;
 	color: #fff;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	font-size: 22px;
+	letter-spacing: .5px;
+	margin: 0;
+	line-height: 0;
 }
 
-p {
-	margin-bottom: 1.5em;
+.fullpage_wrap p {
 	color: #fff;
+	font-size: 35px;
+	margin: 0;
+	line-height: .8;
+}
+.fullpage_wrap .page-section3,
+.fullpage_wrap .page-description3 {
+	color: #000;
 }
 
 dfn,
@@ -361,9 +373,9 @@ html {
 }
 
 body {
-	background-image: url(http://localhost:8888/wp-content/uploads/2016/03/background.jpg); /* Fallback for when there is no custom background color defined. */
+	/*background: #000;  Fallback for when there is no custom background color defined. 
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 }
 
 blockquote:before,
@@ -421,47 +433,74 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+#fullpage div {
+	position: relative;
+	clear: both;
+}
+.page-section1 {
+	position: absolute;
+	right: 95px;
+	top: 400px;
+	z-index: 1000;
+}
+.page-description1 {
+	position: absolute;
+	right: 29px;
+	top: 405px;
+	z-index: 1000;
+}
+.page-section2 {
+	position: absolute;
+	left: 150px;
+	top: 300px;
+	z-index: 1000;
+}
+.page-description2 {
+	position: absolute;
+	left: 100px;
+	top: 305px;
+	z-index: 1000;
 
+}
+.page-section3 {
+	position: absolute;
+	left: 350px;
+	top: 400px;
+	z-index: 1000;
+}
+.page-description3 {
+	position: absolute;
+	left: 400px;
+	top: 405px;
+	z-index: 1000;
+}
+.page-section4 {
+	position: absolute;
+	right: 75px;
+	top: 400px;
+	z-index: 1000;
+}
+.page-description4 {
+	position: absolute;
+	right: 75px;
+	top: 405px;
+	z-index: 1000;
+}
+.page-section5 {
+	position: absolute;
+	left: 75px;
+	top: 400px;
+	z-index: 1000;
+}
+.page-description5 {
+	position: absolute;
+	left: 60px;
+	top: 405px;
+	z-index: 1000;
+}
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1;
-	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-}
-
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -567,86 +606,55 @@ a:active {
 	background-color: #fff;
 }
 
-.main-navigation {
+.menu-main-nav-container {
 	clear: both;
 	display: block;
 	height: 56px;
 	width: 100%;
+	position: relative;
 	font-family: 'Arvo', serif;
 	font-weight: 300;
 	font-size: 9px;
 	background-color: rgba(0, 0, 0, 0.61);
 }
-
-.main-navigation ul {
-	display: none;
+.menu-main-nav-container ul {
 	list-style: none;
-	margin: 0;
-	float: right;
-	width: 50%;
 	position: absolute;
-	top: 85%;
-	left: 43%;
+	left: 45%;
+	padding-top: 20px;
 }
-
-.main-navigation li {
+.menu-main-nav-container li {
 	float: left;
-	position: relative;
-	padding-left: 20px;
+	padding-left: 15px;
 }
-
-.main-navigation a {
-	display: block;
+.menu-main-nav-container li a {
+	padding: 3px;
 	text-decoration: none;
 }
-
-.main-navigation ul ul {
-	float: left;
+.menu-main-nav-container li a:link, /* change menu font color */
+.menu-main-nav-container li a:visited  {
+	color: #fff;
+}
+.menu-main-nav-container li ul { /* aligns sub menu */
+	display: none;
 	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
+	left: -41px;
 }
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+.menu-main-nav-container li:hover ul {
+	display: block;
 }
-
-.main-navigation ul ul a {
-	width: 200px;
+.menu-main-nav-container li li {
+	float: none;
+	padding: 7px 5px;
+	margin: 0;
+	background-color: #E0DDD6;
+	text-align: center;
 }
-
-.main-navigation ul ul li {
-
+.menu-main-nav-container li li a:link { /* change sub-menu font color */
+	color: #000;
 }
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
+.menu-main-nav-container li li:hover {
+	background-color: #ccc;
 }
 
 /* Small menu. */
@@ -779,8 +787,9 @@ a:active {
 .site-branding {
 	position: absolute;
 	top: 5px;
-	width: 50%;
+	/*width: 50%;*/
 	left: 30px;
+	z-index: 999;
 }
 .site-title {
 	margin: 0;
@@ -815,55 +824,29 @@ a:active {
 .site-header,
 .site-info {
 		position:fixed;
-		height: 50px;
 		display:block;
 		width: 100%;
-		z-index:9;
+		z-index: 100;
 		padding: 20px 0 0 0;
 	}
-.site-header{
+.site-header {
 		top: 20px;
+		height: 65px;
 	}
-.site-info{
-		bottom:0px;
+.site-info {
+		bottom: 0px;
+		height: 50px;
 		background-color: rgba(0, 0, 0, 0.61);
 	}
-.site-info p {
-	text-align: right;
-}
-/* Backgrounds will cover all the section
-	* --------------------------------------- */
-.section{
-	background-size: cover;
-}
-/* Defining each sectino background and styles
-* --------------------------------------- */
-#section0{
-	background-image: url(http://localhost:8888/wp-content/uploads/2016/02/homepage1.jpg);
-	padding: 30% 0 0 0;
-}
-#section2{
-	background-image: url(http://localhost:8888/wp-content/uploads/2016/02/homepage2.jpg);
-	padding: 6% 0 0 0;
-}
-#section3{
-	background-image: url(http://localhost:8888/wp-content/uploads/2016/02/homepage3.jpg);
-	padding: 6% 0 0 0;
-}
-#section4{
-	background-image: url(http://localhost:8888/wp-content/uploads/2016/02/homepage4.jpg);
-	padding: 6% 0 0 0;
-}
-#section5{
-	background-image: url(http://localhost:8888/wp-content/uploads/2016/02/homepage5.jpg);
-	padding: 6% 0 0 0;
-}
+
 .fa {
 	font-size: 25px;
 	color: rgb(158,163,168);
 	padding-left: 10px;
 }
-
+.copyright {
+	float: right;
+}
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -879,11 +862,9 @@ a:active {
 # Cabin Page
 --------------------------------------------------------------*/
 .gallery_page_section {
-	margin: 60px auto;
 	height: auto;
 	width: 100%;
 	padding: 30px;
-	/*overflow: hidden;*/
 }
 .gallery_info h4,
 .gallery_info h3,
@@ -909,7 +890,12 @@ a:active {
 }
 .cabin_button {
 	color: #000;
-	background-color: hsla(125, 27%, 50%, 0.8); 
+	background-color: #94B243; 
+	padding: 5px 10px;
+}
+.cabin_button:hover {
+	color: #fff;
+	background-color: #000;
 }
 .gallery {
 	clear: both;

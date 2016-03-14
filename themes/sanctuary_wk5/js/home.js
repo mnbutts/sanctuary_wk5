@@ -1,8 +1,8 @@
 // When the DOM is ready
-$(function() {
+jQuery(function() {
 
-	$(document).ready(function() {
-    $('#fullpage').fullpage({
+	jQuery(document).ready(function() {
+    jQuery('#fullpage').fullpage({
     	'verticalCentered': false
     });  
 });

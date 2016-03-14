@@ -19,15 +19,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/flexslider.css" type="text/css">
 
-<?php wp_enqueue_script("jquery"); ?>
-
-
-
 <?php wp_head(); ?>
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.flexslider.js"></script>
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/cabin.js"></script>
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fullPage.js"></script>
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/home.js"></script>
+	
 
 </head>
 
@@ -35,7 +28,9 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sanctuary_wk5' ); ?></a>
 
+
 	<header id="masthead" class="site-header" role="banner">
+		
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
@@ -52,7 +47,8 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="site-navigation" class="main-navigation" role="
+		navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sanctuary_wk5' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->

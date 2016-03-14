@@ -1,9 +1,9 @@
 // When the DOM is ready
-$(function() {
+jQuery(function() {
 
-$(window).load(function() {
+jQuery(window).load(function() {
   // The slider being synced must be initialized first
-  $('#carousel').flexslider({
+  jQuery('#carousel').flexslider({
     animation: "slide",
     controlNav: false,
     animationLoop: false,
@@ -13,7 +13,7 @@ $(window).load(function() {
     asNavFor: '#slider'
   });
  
-  $('#slider').flexslider({
+  jQuery('#slider').flexslider({
     animation: "slide",
     controlNav: false,
     animationLoop: false,

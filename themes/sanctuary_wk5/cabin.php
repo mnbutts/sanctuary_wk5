@@ -3,15 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>Page Title</title>
+    <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/flexslider.css" />
 </head>
+
 
 <?php
 /*
 Template Name: Cabin Page
 */
-
 get_header(); ?>
-<body>
+<body style="background-image: url(<?php the_field('cabin_background'); ?>); background-position: center; background-repeat: no-repeat; background-size: cover">
 <div class="gallery_page_section">
 <section class="gallery">
    <?php
@@ -27,15 +29,15 @@ get_header(); ?>
                 <?php endforeach; ?>
             </ul>
         </div>
-        <!--<div id="carousel" class="flexslider">
+        <div id="carousel" class="flexslider">
             <ul class="slides">
                 <?php foreach( $images as $image ): ?>
                     <li>
-                        <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                     </li>
                 <?php endforeach; ?>
             </ul>
-        </div> -->
+        </div>
  
     <?php endif; ?>
 </section>

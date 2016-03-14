@@ -26,6 +26,11 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.flexslider.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/cabin.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.fullpage.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/home.js"></script>
+ 
 <?php wp_footer(); ?>
 
 </body>
